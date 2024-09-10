@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tinqbit Admin Panel</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../assets/images/logos/logo.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../assets/libs/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="../assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="../assets/css/component.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body id="body-pd" class="body-pd">
+    <div class="l-navbar show" id="nav-bar">
+      <nav class="nav">
+        <div class="brand-logo d-flex align-items-center">
+          <img
+            class="logo-only"
+            src="../assets/images/logos/logo_only.png"
+            alt=""
+          />
+          <img
+            class="logo-text"
+            src="../assets/images/logos/logo_text.png"
+            alt=""
+          />
+        </div>
+
+        <div class="nav_list_container">
+          <div class="nav_list">
+            <!-- <p class="nav_list_title" id="nav_list_title">Main</p> -->
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Dashboard</span>
+            </a>
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Customer</span>
+            </a>
+            <a href="#" class="nav_link active">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon active-icon"
+              />
+
+              <span class="nav_name">Gold Loan</span>
+            </a>
+          </div>
+          <div class="buttom-nav">
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Settings</span>
+            </a>
+            <div class="menu_toggle">
+              <img
+                id="menu-toggle"
+                src="../assets/images/icons/arrow-left.svg"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="header body-pd body-pd-small" id="header">
+      <div class="profile-box">
+        <h4>Welcome</h4>
+        <h3>Ajith KR</h3>
+      </div>
+      <div class="icon-box">
+        <button class="round-icon-button">
+          <!-- <img src="../assets/images/icons/bell.svg" alt="icon" class="icon" /> -->
+          <svg
+            class="icon-svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17V18C9 18.394 9.0776 18.7841 9.22836 19.1481C9.37913 19.512 9.6001 19.8427 9.87868 20.1213C10.1573 20.3999 10.488 20.6209 10.8519 20.7716C11.2159 20.9224 11.606 21 12 21C12.394 21 12.7841 20.9224 13.1481 20.7716C13.512 20.6209 13.8427 20.3999 14.1213 20.1213C14.3999 19.8427 14.6209 19.512 14.7716 19.1481C14.9224 18.7841 15 18.394 15 18V17M18 9C18 12 20 17 20 17H4C4 17 6 13 6 9C6 5.732 8.732 3 12 3C15.268 3 18 5.732 18 9Z"
+              stroke="#001A72"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="round-icon-button">
+          <!-- <img src="../assets/images/icons/bell.svg" alt="icon" class="icon" /> -->
+          <svg
+            class="icon-svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H15M8 8L4 12M4 12L8 16M4 12L16 12"
+              stroke="#001A72"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!--Container Main start-->
+    <div class="height-100">
+      <div class="container-fluid main-container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div id="search-box">
+              <svg
+                class="search-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 20L15.8033 15.8033M18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C14.6421 18 18 14.6421 18 10.5Z"
+                  stroke="#001A72"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input type="text" id="search" placeholder="Search.." />
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+
+          <div class="col-lg-2 d-flex justify-content-end">
+            <button
+              class="primary-button"
+              style="width: 80%"
+              onclick="openPopup('popup', 'popupOverlay')"
+            >
+              Add New
+            </button>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div
+              class="btn-group group-button-container"
+              role="group"
+              aria-label="Basic example"
+            >
+              <button type="button" class="btn btn-secondary btngroup--btn">
+                All
+              </button>
+              <button type="button" class="btn btn-secondary btngroup--btn">
+                Varification Pending
+              </button>
+              <button type="button" class="btn btn-secondary btngroup--btn">
+                Maturing Loans
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <table id="normal-table" class="mt-2">
+              <tr>
+                <th>No</th>
+                <th>Reg Number</th>
+                <th>GL.Number</th>
+                <th>Name</th>
+                <th>weight & No of items</th>
+                <th>GL.Pledge Date</th>
+                <th>GL.Pledge Amt</th>
+                <th>GL.Settlement Date</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <a onclick="openPopup('popup-details-view', 'popupOverlay')"
+                    >128798459834</a
+                  >
+                </td>
+                <td>GL128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>16 gm / 3</td>
+                <td>12/01/2024</td>
+                <td>200000.00</td>
+                <td>12/01/2025</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>128798459834</td>
+                <td>GL128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>16 gm / 3</td>
+                <td>12/01/2024</td>
+                <td>200000.00</td>
+                <td>12/01/2025</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>128798459834</td>
+                <td>GL128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>16 gm / 3</td>
+                <td>12/01/2024</td>
+                <td>200000.00</td>
+                <td>12/01/2025</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>128798459834</td>
+                <td>GL128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>16 gm / 3</td>
+                <td>12/01/2024</td>
+                <td>200000.00</td>
+                <td>12/01/2025</td>
+
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-lg-12">
+            <div class="pagination-button-container">
+              <!-- First Button (Icon left, Text right) -->
+              <a href="#" class="button">
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 12L20 12M4 12L10 6M4 12L10 18"
+                    stroke="#001A72"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Prev</span>
+              </a>
+
+              <!-- Second Button (Text left, Icon right) -->
+              <a
+                href="#"
+                class="button right-icon"
+                onclick="handleClick('Upload')"
+              >
+                <span>Next</span>
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12L4 12M20 12L14 18M20 12L14 6"
+                    stroke="#001A72"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Container Main end-->
+    <!-- Popup Overlay (background dim effect) -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <!-- Popup Box -->
+    <div id="popup" class="popup">
+      <form id="myForm">
+        <div class="popup-header">
+          <h4>Gold Loan Registration</h4>
+          <button
+            class="square-icon-button"
+            onclick="closePopup('popup', 'popupOverlay')"
+          >
+            <img
+              src="../assets/images/icons/cross.svg"
+              alt="icon"
+              class="icon"
+            />
+          </button>
+        </div>
+        <div class="container-fluid popup-content">
+          <div class="row">
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="registor-number">Registor Number</label>
+                <input
+                  type="text"
+                  id="registor-number"
+                  name="registor-number"
+                  placeholder="Enter Registor Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="full-name">Full Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Enter Full Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="sectioned-loan-amt">Sectioned Loan Amt</label>
+                <input
+                  type="text"
+                  id="sectioned-loan-amt"
+                  name="sectioned-loan-amt"
+                  placeholder="Enter Sectioned Amount"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <table id="">
+                <tr>
+                  <th>No</th>
+                  <th>Particulars</th>
+                  <th>Count(Nos)</th>
+                  <th>Gross weight(gm)</th>
+                  <th>Net Weight(gm)</th>
+                  <th>Caret</th>
+                  <th>Eligible.Amt</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <div class="select-container" style="width: 180px">
+                      <select name="device">
+                        <option value="" disabled selected>Select items</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="mobile">Mobile</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="input-container"
+                      style="max-width: 180px; min-width: 90px"
+                    >
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="0"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="input-container"
+                      style="max-width: 180px; min-width: 90px"
+                    >
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="0.00"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="input-container"
+                      style="max-width: 180px; min-width: 90px"
+                    >
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="0.0"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="select-container"
+                      style="max-width: 180px; min-width: 140px"
+                    >
+                      <select name="device">
+                        <option value="" disabled selected>Select Caret</option>
+                        <option value="desktop">20K caret</option>
+                        <option value="tablet">22K caret</option>
+                        <option value="mobile">24K caret</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td class="debit">500.00</td>
+
+                  <td>
+                    <button class="table-icon-button">
+                      <img
+                        src="../assets/images/icons/trash.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th colspan="2">Total</th>
+                  <th id="total-count">4</th>
+                  <th id="total-gross-weight">16.00</th>
+                  <th id="total-net-weight">17.00</th>
+
+                  <th></th>
+                  <th id="total-amount">200000.00</th>
+                  <th>
+                    <button class="table-icon-button">
+                      <img
+                        src="../assets/images/icons/plus.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                    </button>
+                  </th>
+                </tr>
+              </table>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="nominee-name">Nominee Name</label>
+                <input
+                  type="text"
+                  id="nominee-name"
+                  name="nominee-name"
+                  placeholder="Enter Nominee Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="nominee-age">Nominee Age</label>
+                <input
+                  type="text"
+                  id="nominee-age"
+                  name="nominee-age"
+                  placeholder="Enter Nominee Age"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+              <div class="select-container">
+                <label for="username">RelationShip</label>
+                <select name="device">
+                  <option value="" disabled selected>Select items</option>
+                  <option value="desktop">Father</option>
+                  <option value="tablet">Mather</option>
+                  <option value="mobile">sister</option>
+                  <option value="mobile">brother</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-12 row mx-0 my-3 p-0">
+              <div class="col-lg-4">
+                <div class="checkbox-container">
+                  <p>
+                    Verified the Ornaments and certified that the purity ,weight
+                    and count ot the above ornaments are found correct.
+                  </p>
+                  <input type="checkbox" class="largerCheckbox" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="file-area">
+                  <input
+                    type="file"
+                    accept=".jpeg, .png"
+                    name="aadhaar-image"
+                    id="aadhaar-image"
+                    required="required"
+                    multiple="multiple"
+                  />
+                  <div class="file-dummy">
+                    <div class="success upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">Great, your files are selected. Keep on.</h3>
+                      <p>../asset.logo.png</p>
+                    </div>
+                    <div class="default upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">
+                        Click to upload <span>Gold Ornaments Image</span>
+                      </h3>
+                      <p>Supported formates: JPEG, PNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-bottom">
+          <div class="button-container">
+            <button class="secondary-button">Cancel</button>
+            <div style="width: 18px"></div>
+            <button class="primary-button" type="submit">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Popup Overlay (background dim effect)-->
+    <!-- <div id="popupOverlay" class="popup-overlay"></div> -->
+
+    <!-- Popup Box for Loan details view-->
+    <div id="popup-details-view" class="popup">
+      <form id="myForm">
+        <div class="popup-header">
+          <h4>Loan Details</h4>
+          <button
+            class="square-icon-button"
+            onclick="closePopup('popup-details-view', 'popupOverlay')"
+          >
+            <img
+              src="../assets/images/icons/cross.svg"
+              alt="icon"
+              class="icon"
+            />
+          </button>
+        </div>
+        <div class="container-fluid popup-content">
+          <div class="row">
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="registor-number">Registor Number</label>
+                <input
+                  type="text"
+                  id="registor-number"
+                  name="registor-number"
+                  placeholder="Enter Registor Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="full-name">Full Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Enter Full Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="sectioned-loan-amt">Sectioned Loan Amt</label>
+                <input
+                  type="text"
+                  id="sectioned-loan-amt"
+                  name="sectioned-loan-amt"
+                  placeholder="Enter Sectioned Amount"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+              <div
+                class="btn-group group-button-container"
+                role="group"
+                aria-label="Basic example"
+              >
+                <button
+                  type="button"
+                  class="btn btn-secondary btngroup--btn tab tab-active"
+                  onclick="openTab('loan-history')"
+                >
+                  Loan History
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btngroup--btn tab"
+                  onclick="openTab('loan-details')"
+                >
+                  Loan Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btngroup--btn tab"
+                  onclick="openTab('personal-details')"
+                >
+                  Personal Details
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <!-- Tab content -->
+              <div id="loan-history" class="tab-content tab-active">
+                <div class="col-lg-8">
+                  <table id="loan-history-table">
+                    <tr>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>Voucher</th>
+                      <th>Pricipal</th>
+                      <th>Interest</th>
+                      <th>Others</th>
+                    </tr>
+                    <tr>
+                      <td>11/01/2024</td>
+                      <td>Loan Application</td>
+                      <td>0.00</td>
+                      <td>200000.00</td>
+                      <td>0.00</td>
+                      <td>0.00</td>
+                    </tr>
+                    <tr>
+                      <td>11/01/2024</td>
+                      <td>Loan Application</td>
+                      <td>0.00</td>
+                      <td>200000.00</td>
+                      <td>0.00</td>
+                      <td>0.00</td>
+                    </tr>
+                    <tr>
+                      <td>11/01/2024</td>
+                      <td>Loan Application</td>
+                      <td>0.00</td>
+                      <td>200000.00</td>
+                      <td>0.00</td>
+                      <td>0.00</td>
+                    </tr>
+                    <tr>
+                      <td>11/01/2024</td>
+                      <td>Loan Application</td>
+                      <td>0.00</td>
+                      <td>200000.00</td>
+                      <td>0.00</td>
+                      <td>0.00</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="col-lg-4">
+                  <h2 class="p-2">Tab 1 Content</h2>
+                </div>
+              </div>
+
+              <div id="loan-details" class="tab-content">
+                <h2>Tab 2 Content</h2>
+                <p>This is content for Tab 2.</p>
+              </div>
+
+              <div id="personal-details" class="tab-content">
+                <h2>Tab 3 Content</h2>
+                <p>This is content for Tab 3.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-bottom">
+          <div class="button-container">
+            <button class="secondary-button">Cancel</button>
+            <div style="width: 18px"></div>
+            <button class="primary-button" type="submit">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/app.min.js"></script>
+
+    <script src="../assets/js/customer.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+  </body>
+</html>

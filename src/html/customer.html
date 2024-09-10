@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tinqbit Admin Panel</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../assets/images/logos/logo.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../assets/libs/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="../assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="../assets/css/component.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body id="body-pd" class="body-pd">
+    <div class="l-navbar show" id="nav-bar">
+      <nav class="nav">
+        <div class="brand-logo d-flex align-items-center">
+          <img
+            class="logo-only"
+            src="../assets/images/logos/logo_only.png"
+            alt=""
+          />
+          <img
+            class="logo-text"
+            src="../assets/images/logos/logo_text.png"
+            alt=""
+          />
+        </div>
+
+        <div class="nav_list_container">
+          <div class="nav_list">
+            <!-- <p class="nav_list_title" id="nav_list_title">Main</p> -->
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Dashboard</span>
+            </a>
+            <a href="#" class="nav_link active">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon active-icon"
+              />
+
+              <span class="nav_name">Customer</span>
+            </a>
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Gold Loan</span>
+            </a>
+          </div>
+          <div class="buttom-nav">
+            <a href="#" class="nav_link">
+              <img
+                src="../assets/images/icons/dashboard.svg"
+                alt="icon"
+                class="icon"
+              />
+
+              <span class="nav_name">Settings</span>
+            </a>
+            <div class="menu_toggle">
+              <img
+                id="menu-toggle"
+                src="../assets/images/icons/arrow-left.svg"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="header body-pd body-pd-small" id="header">
+      <div class="profile-box">
+        <h4>Welcome</h4>
+        <h3>Ajith KR</h3>
+      </div>
+      <div class="icon-box">
+        <button class="round-icon-button">
+          <!-- <img src="../assets/images/icons/bell.svg" alt="icon" class="icon" /> -->
+          <svg
+            class="icon-svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17V18C9 18.394 9.0776 18.7841 9.22836 19.1481C9.37913 19.512 9.6001 19.8427 9.87868 20.1213C10.1573 20.3999 10.488 20.6209 10.8519 20.7716C11.2159 20.9224 11.606 21 12 21C12.394 21 12.7841 20.9224 13.1481 20.7716C13.512 20.6209 13.8427 20.3999 14.1213 20.1213C14.3999 19.8427 14.6209 19.512 14.7716 19.1481C14.9224 18.7841 15 18.394 15 18V17M18 9C18 12 20 17 20 17H4C4 17 6 13 6 9C6 5.732 8.732 3 12 3C15.268 3 18 5.732 18 9Z"
+              stroke="#001A72"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="round-icon-button">
+          <!-- <img src="../assets/images/icons/bell.svg" alt="icon" class="icon" /> -->
+          <svg
+            class="icon-svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H15M8 8L4 12M4 12L8 16M4 12L16 12"
+              stroke="#001A72"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!--Container Main start-->
+    <div class="height-100">
+      <div class="container-fluid main-container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div id="search-box">
+              <svg
+                class="search-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 20L15.8033 15.8033M18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C14.6421 18 18 14.6421 18 10.5Z"
+                  stroke="#001A72"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input type="text" id="search" placeholder="Search.." />
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+
+          <div class="col-lg-2 d-flex justify-content-end">
+            <button
+              class="primary-button"
+              style="width: 80%"
+              onclick="openPopup('popup', 'popupOverlay')"
+            >
+              Add New
+            </button>
+          </div>
+
+          <div class="col-lg-12">
+            <table id="normal-table">
+              <tr>
+                <th>No</th>
+                <th>Reg Number</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>email</th>
+                <th>DOB</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>Flat No 12B Kottayam</td>
+                <td>+919456345734</td>
+                <td>rahul@gmail.com</td>
+                <td>12/08/1990</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>Flat No 12B Kottayam</td>
+                <td>+919456345734</td>
+                <td>rahul@gmail.com</td>
+                <td>12/08/1990</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>Flat No 12B Kottayam</td>
+                <td>+919456345734</td>
+                <td>rahul@gmail.com</td>
+                <td>12/08/1990</td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>128798459834</td>
+                <td>Rahul Kumar</td>
+                <td>Flat No 12B Kottayam</td>
+                <td>+919456345734</td>
+                <td>rahul@gmail.com</td>
+                <td>12/08/1990</td>
+
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+                <td>
+                  <button class="table-icon-button" onclick="deleteRow(this)">
+                    <img
+                      src="../assets/images/icons/trash.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-lg-12">
+            <div class="pagination-button-container">
+              <!-- First Button (Icon left, Text right) -->
+              <a href="#" class="button">
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 12L20 12M4 12L10 6M4 12L10 18"
+                    stroke="#001A72"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Prev</span>
+              </a>
+
+              <!-- Second Button (Text left, Icon right) -->
+              <a
+                href="#"
+                class="button right-icon"
+                onclick="handleClick('Upload')"
+              >
+                <span>Next</span>
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12L4 12M20 12L14 18M20 12L14 6"
+                    stroke="#001A72"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Container Main end-->
+    <!-- Popup Overlay (background dim effect) -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+
+    <!-- Popup Box -->
+    <div id="popup" class="popup">
+      <form id="myForm">
+        <div class="popup-header">
+          <h4>Customer Registration</h4>
+          <button
+            class="square-icon-button"
+            onclick="closePopup('popup', 'popupOverlay')"
+          >
+            <img
+              src="../assets/images/icons/cross.svg"
+              alt="icon"
+              class="icon"
+            />
+          </button>
+        </div>
+        <div class="container-fluid popup-content">
+          <div class="row">
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="firstname">First Name</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="Enter first Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="lastname">Last Name</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter Last Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="middlename">Middile Name</label>
+                <input
+                  type="text"
+                  id="middlename"
+                  name="middlename"
+                  placeholder="Enter Middile Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="textarea-container">
+                <label for="address">Address</label>
+                <textarea
+                  placeholder="This is an awesome comment box"
+                  rows="5"
+                  name="comment[text]"
+                  id="comment_text"
+                  cols="40"
+                  class="ui-autocomplete-input"
+                  autocomplete="off"
+                  role="textbox"
+                  aria-autocomplete="list"
+                  aria-haspopup="true"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-lg-8 row m-0 p-0">
+              <div class="col-lg-6 my-2">
+                <div class="select-container">
+                  <label for="city">City</label>
+                  <select name="device">
+                    <option value="" disabled selected>Select items</option>
+                    <option value="desktop">Desktop</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="mobile">Mobile</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6 my-2">
+                <div class="select-container">
+                  <label for="state">State</label>
+                  <select name="device">
+                    <option value="" disabled selected>Select items</option>
+                    <option value="desktop">Desktop</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="mobile">Mobile</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6 my-2">
+                <div class="input-container">
+                  <label for="pincode">Pincode</label>
+                  <input
+                    type="text"
+                    id="pincode"
+                    name="pincode"
+                    placeholder="Enter Middile Name"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 my-2">
+                <div class="input-container">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Enter Middile Name"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="primarymobile">Mobile Number</label>
+                <div class="mobile-number-box">
+                  <input
+                    style="width: 50px"
+                    value="+91"
+                    type="text"
+                    placeholder=""
+                    autocomplete="off"
+                    disabled
+                  />
+
+                  <input
+                    type="text"
+                    id="primarymobile"
+                    name="primarymobile"
+                    placeholder="Enter Primary Mobile"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="secondarymobile">Mobile Number</label>
+                <div class="mobile-number-box">
+                  <input
+                    style="width: 50px"
+                    value="+91"
+                    type="text"
+                    placeholder=""
+                    autocomplete="off"
+                    disabled
+                  />
+
+                  <input
+                    type="text"
+                    id="secondarymobile"
+                    name="secondarymobile"
+                    placeholder="Enter Secondary Mobile"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="occupation">Occupation</label>
+                <input
+                  type="text"
+                  id="occupation"
+                  name="occupation"
+                  placeholder="Enter Occupation"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="dob">Date Of Birth</label>
+                <input
+                  type="date"
+                  id="dob"
+                  name="dob"
+                  class=""
+                  placeholder="Right icon"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="age">Age</label>
+                <input
+                  type="text"
+                  id="age"
+                  name="age"
+                  placeholder="Enter Age"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="aadhaarnumber">Aadhaar</label>
+                <input
+                  type="text"
+                  id="aadhaarnumber"
+                  name="aadhaarnumber"
+                  placeholder="Enter Aadhaar Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 my-2">
+              <div class="input-container">
+                <label for="pannumber">PAN Number</label>
+                <input
+                  type="text"
+                  id="pannumber"
+                  name="pannumber"
+                  placeholder="Enter PAN Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-12 row mx-0 my-3 p-0">
+              <div class="col-lg-4">
+                <div class="file-area">
+                  <input
+                    type="file"
+                    accept=".jpeg, .png"
+                    name="aadhaar-image"
+                    id="aadhaar-image"
+                    required="required"
+                    multiple="multiple"
+                  />
+                  <div class="file-dummy">
+                    <div class="success upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">Great, your files are selected. Keep on.</h3>
+                      <p>../asset.logo.png</p>
+                    </div>
+                    <div class="default upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">
+                        Click to upload <span>Aadhaar Image </span>
+                      </h3>
+                      <p>Supported formates: JPEG, PNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="file-area">
+                  <input
+                    type="file"
+                    accept=".jpeg, .png"
+                    name="pan-image"
+                    id="pan-image"
+                    required="required"
+                    multiple="multiple"
+                  />
+                  <div class="file-dummy">
+                    <div class="success upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">Great, your files are selected. Keep on.</h3>
+                      <p>../asset.logo.png</p>
+                    </div>
+                    <div class="default upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">
+                        Click to upload <span>PAN Card Image </span>
+                      </h3>
+                      <p>Supported formates: JPEG, PNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="file-area">
+                  <input
+                    type="file"
+                    accept=".jpeg, .png"
+                    name="customer-image"
+                    id="customer-image"
+                    required="required"
+                    multiple="multiple"
+                  />
+                  <div class="file-dummy">
+                    <div class="success upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">Great, your files are selected. Keep on.</h3>
+                      <p>../asset.logo.png</p>
+                    </div>
+                    <div class="default upload-container">
+                      <img
+                        src="../assets/images/icons/upload.svg"
+                        alt="icon"
+                        class="icon"
+                      />
+                      <h3 class="">
+                        Click to upload <span>Customer Photo </span>
+                      </h3>
+                      <p>Supported formates: JPEG, PNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-bottom">
+          <div class="button-container">
+            <button class="secondary-button">Cancel</button>
+            <div style="width: 18px"></div>
+            <button class="primary-button" type="submit">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/customer.js"></script>
+  </body>
+</html>
