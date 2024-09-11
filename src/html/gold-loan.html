@@ -689,7 +689,7 @@
                   name="registor-number"
                   placeholder="Enter Registor Number"
                   autocomplete="off"
-                  required
+                  disabled
                 />
               </div>
             </div>
@@ -702,7 +702,7 @@
                   name="full-name"
                   placeholder="Enter Full Name"
                   autocomplete="off"
-                  required
+                  disabled
                 />
               </div>
             </div>
@@ -715,7 +715,7 @@
                   name="sectioned-loan-amt"
                   placeholder="Enter Sectioned Amount"
                   autocomplete="off"
-                  required
+                  disabled
                 />
               </div>
             </div>
@@ -736,7 +736,7 @@
                 <button
                   type="button"
                   class="btn btn-secondary btngroup--btn tab"
-                  onclick="openTab('loan-details')"
+                  onclick="openTab('gold-details')"
                 >
                   Loan Details
                 </button>
@@ -752,7 +752,10 @@
             <div class="col-lg-12">
               <!-- Tab content -->
               <div id="loan-history" class="tab-content tab-active">
-                <div class="col-lg-8">
+                <div
+                  class="col-lg-8"
+                  style="max-height: 600px; overflow-y: auto"
+                >
                   <table id="loan-history-table">
                     <tr>
                       <th>Date</th>
@@ -797,18 +800,312 @@
                   </table>
                 </div>
                 <div class="col-lg-4">
-                  <h2 class="p-2">Tab 1 Content</h2>
+                  <div class="repayment-details-container">
+                    <div class="repayment-details-box">
+                      <div class="name">Interest Amount</div>
+                      <div class="colon">:</div>
+                      <div class="value">500.00</div>
+                    </div>
+                    <div class="repayment-details-box">
+                      <div class="name">Interest Rate</div>
+                      <div class="colon">:</div>
+                      <div class="value">590.00</div>
+                    </div>
+                    <div class="repayment-details-box">
+                      <div class="name">Principal Amount</div>
+                      <div class="colon">:</div>
+                      <div class="value">90.00</div>
+                    </div>
+                    <div class="repayment-details-box">
+                      <div class="name">Others Amount</div>
+                      <div class="colon">:</div>
+                      <div class="value">590.00</div>
+                    </div>
+                    <div class="repayment-details-box">
+                      <div class="name">Total Amount</div>
+                      <div class="colon">:</div>
+                      <div class="value">90.00</div>
+                    </div>
+                    <div class="button-container">
+                      <button class="primary-button">Repay Amount</button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div id="loan-details" class="tab-content">
-                <h2>Tab 2 Content</h2>
-                <p>This is content for Tab 2.</p>
+              <div id="gold-details" class="tab-content">
+                <div class="col-lg-9">
+                  <table id="creditDebitTable">
+                    <tr>
+                      <th>Sl.No</th>
+                      <th>Particular</th>
+                      <th>Count</th>
+                      <th>Gross Weight(gm)</th>
+                      <th>Net Weight(gm)</th>
+                      <th>Caret</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Gold Coin</td>
+                      <td>3</td>
+                      <td>16.4</td>
+                      <td>17.0</td>
+                      <td>22K Caret</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Gold Coin</td>
+                      <td>3</td>
+                      <td>16.4</td>
+                      <td>17.0</td>
+                      <td>22K Caret</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Gold Coin</td>
+                      <td>3</td>
+                      <td>16.4</td>
+                      <td>17.0</td>
+                      <td>22K Caret</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Gold Coin</td>
+                      <td>3</td>
+                      <td>16.4</td>
+                      <td>17.0</td>
+                      <td>22K Caret</td>
+                    </tr>
+
+                    <tr>
+                      <th colspan="2">Total</th>
+                      <th id=""></th>
+                      <th id=""></th>
+                      <th id=""></th>
+                      <th id=""></th>
+                    </tr>
+                  </table>
+                </div>
+                <div class="col-lg-3">
+                  <div class="gold-image-container">
+                    <p>Gold Ornaments Images</p>
+                    <div>
+                      <img
+                        class="gold-image"
+                        src="../assets/images/gold.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div id="personal-details" class="tab-content">
-                <h2>Tab 3 Content</h2>
-                <p>This is content for Tab 3.</p>
+                <div class="row">
+                  <div class="col-lg-4 my-2">
+                    <div class="textarea-container">
+                      <label for="address">Address</label>
+                      <textarea
+                        rows="5"
+                        name="comment[text]"
+                        id="comment_text"
+                        cols="40"
+                        class="ui-autocomplete-input"
+                        autocomplete="off"
+                        role="textbox"
+                        aria-autocomplete="list"
+                        aria-haspopup="true"
+                        style="resize: none"
+                        disabled
+                      >
+Address 1,Line 1 line2</textarea
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-8 row m-0 p-0">
+                    <div class="col-lg-6 my-2">
+                      <div class="input-container">
+                        <label for="city">City</label>
+                        <input
+                          value="Kottayam"
+                          type="text"
+                          id="city"
+                          name="city"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                      <div class="input-container">
+                        <label for="state">State</label>
+                        <input
+                          value="Kerala"
+                          type="text"
+                          id="state"
+                          name="state"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                      <div class="input-container">
+                        <label for="pincode">Pincode</label>
+                        <input
+                          value="686542"
+                          type="text"
+                          id="pincode"
+                          name="pincode"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-2">
+                      <div class="input-container">
+                        <label for="country">Country</label>
+                        <input
+                          value="India"
+                          type="text"
+                          id="country"
+                          name="country"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="email">Email</label>
+                      <input
+                        value="ajithkr@gmail.com"
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="primarymobile">Mobile Number</label>
+                      <div class="mobile-number-box">
+                        <input
+                          style="width: 50px"
+                          value="+91"
+                          type="text"
+                          autocomplete="off"
+                          disabled
+                        />
+
+                        <input
+                          value="9497085589"
+                          type="text"
+                          id="primarymobile"
+                          name="primarymobile"
+                          placeholder="Enter Primary Mobile"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="secondarymobile">Mobile Number</label>
+                      <div class="mobile-number-box">
+                        <input
+                          style="width: 50px"
+                          value="+91"
+                          type="text"
+                          autocomplete="off"
+                          disabled
+                        />
+
+                        <input
+                          value="9648254563"
+                          type="text"
+                          id="secondarymobile"
+                          name="secondarymobile"
+                          placeholder="Enter Secondary Mobile"
+                          autocomplete="off"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="occupation">Occupation</label>
+                      <input
+                        value="Business"
+                        type="text"
+                        id="occupation"
+                        name="occupation"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="dob">Date Of Birth</label>
+                      <input
+                        value="12/06/1990"
+                        type="text"
+                        id="dob"
+                        name="dob"
+                        class=""
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="age">Age</label>
+                      <input
+                        value="35"
+                        type="text"
+                        id="age"
+                        name="age"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="aadhaarnumber">Aadhaar</label>
+                      <input
+                        value="258468972565"
+                        type="text"
+                        id="aadhaarnumber"
+                        name="aadhaarnumber"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 my-2">
+                    <div class="input-container">
+                      <label for="pannumber">PAN Number</label>
+                      <input
+                        value="DIMPF2540R"
+                        type="text"
+                        id="pannumber"
+                        name="pannumber"
+                        autocomplete="off"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -816,9 +1113,10 @@
 
         <div class="popup-bottom">
           <div class="button-container">
+            <div style="width: 180px"></div>
+
             <button class="secondary-button">Cancel</button>
-            <div style="width: 18px"></div>
-            <button class="primary-button" type="submit">Save</button>
+            <!-- <button class="primary-button" type="submit">Save</button> -->
           </div>
         </div>
       </form>

@@ -17,6 +17,33 @@
   padding: 0;
   -webkit-box-sizing: border-box;
 }
+
+/* SCROLL BAR STYLE  START*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* SCROLL BAR STYLE  END*/
+
 body {
   position: relative;
   /* margin: var(--header-height) 0 0 0; */

@@ -604,6 +604,7 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 20px 0px 0px 16px;
 }
 .repayment-details-box {
   display: flex;
@@ -625,4 +626,20 @@ button {
 }
 .repayment-details-container .button-container {
   margin-top: 26px;
+}
+
+/* VIEW GOLD IMAGE WIDGET */
+.gold-image-container {
+  margin: 20px 0px 0px 16px;
+  /* overflow: hidden; */
+}
+
+.gold-image-container P {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.gold-image-container img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
 }
