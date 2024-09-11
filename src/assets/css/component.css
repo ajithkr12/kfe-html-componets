@@ -217,7 +217,8 @@
 /* GROUP BUTTON */
 
 .group-button-container {
-  width: 100%;
+  max-width: 540px;
+  background-color: #fe4141;
 }
 
 .group-button-container {
@@ -225,6 +226,7 @@
   line-height: 1;
   white-space: nowrap;
   display: inline;
+  background-color: #fe4141;
 }
 .btngroup--btn {
   font-size: 12px;
@@ -235,9 +237,12 @@
   /* border: 2px solid #d7dedd; */
   border-left-width: 0;
   display: inline-block;
-  padding: 6px 20px;
+  padding: 0px 20px;
+  height: 38px;
   outline: 0;
   margin: 0px;
+  max-width: 180px;
+  min-width: 100px;
 }
 .btngroup--btn:first-child {
   border-left-width: 2px;
@@ -263,7 +268,7 @@
 
 /* TABLE STYLE */
 
-table {
+.custom-table {
   width: 100%;
   /* border-collapse: collapse; */
   border-collapse: separate;
@@ -271,50 +276,44 @@ table {
 
   margin: 20px 0;
   border-radius: 10px;
-  border: 1px solid #e6e6e6; /* Red border */
+  border: 1px solid #e6e6e6;
 
   overflow: hidden; /* Ensure the radius applies properly */
   font-size: 16px;
 }
 
-th,
-td {
+.custom-table th,
+.custom-table td {
   border: 1px solid #e6e6e6;
   border-style: none solid solid none;
   padding: 12px;
   text-align: left;
 }
 
-th {
+.custom-table th {
   /* background-color: #f2f2f2; */
   font-weight: 600;
 }
 
 /* Apply border-radius to the first and last row */
-table tr:first-child th:first-child {
+.custom-table tr:first-child th:first-child {
   border-top-left-radius: 10px;
 }
-table tr:first-child th:last-child {
+.custom-table tr:first-child th:last-child {
   border-top-right-radius: 10px;
 }
-table tr:last-child th:first-child {
+.custom-table tr:last-child th:first-child {
   border-bottom-left-radius: 10px;
 }
-table tr:last-child th:last-child {
+.custom-table tr:last-child th:last-child {
   border-bottom-right-radius: 10px;
 }
 
-table tr:nth-child(odd) {
+.custom-table tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
-table tr:nth-child(even) {
+.custom-table tr:nth-child(even) {
   background-color: #ffffff;
-}
-
-button {
-  padding: 5px 10px;
-  margin-top: 10px;
-  cursor: pointer;
 }
 
 /* TABLE ICON BUTTON */
@@ -354,7 +353,7 @@ button {
 
 /* SEARCH BOX */
 
-#search-box {
+.icon-input-box {
   display: flex;
   align-items: stretch;
   border: 1px solid #d7dedd;
@@ -362,23 +361,23 @@ button {
   background-color: #ffffff;
   overflow: hidden;
   width: 100%;
-  height: 46px;
+  height: 38px;
 }
-#search {
+.icon-input {
   border: none;
-  width: 90%;
-  font-size: 16px;
+  width: 85%;
+  font-size: 14px;
 }
-#search:focus {
+.icon-input:focus {
   outline: none;
   background-color: #ffffff;
 }
-.search-icon {
-  margin: 10px;
+.icon-input-box .icon {
+  margin: auto;
   color: rgba(0, 0, 0, 0.564);
 }
 
-.search-icon path {
+.icon-input-box .icon path {
   fill: none; /* No fill */
   stroke: #e6e6e6; /* Change stroke (outline) color to red */
 }
